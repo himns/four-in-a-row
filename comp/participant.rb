@@ -1,45 +1,25 @@
-class Participant
+# class Participant
+#   CHICKENWINGS_SCORE = 5
 
-  attr_accessor :name, :chickenwings, :hamburgers, :hotdogs, :list
+#   attr_reader :name, :chickenwings, :hamburgers, :hotdogs
 
-  def initialize(args)
-    @name = args[:name]
-    @chickenwings = args.fetch(:chickenwings, 0) * 5
-    @hamburgers = args.fetch(:hamburgers, 0) * 3
-    @hotdogs = args.fetch(:hotdogs, 0) * 2
-    @list = list
-  end
+#   def initialize(args = {})
+#     @name = args[:name]
+#     @chickenwings = args.fetch(:chickenwings, 0) * CHICKENWINGS_SCORE
+#     @hamburgers = args.fetch(:hamburgers, 0) * 3
+#     @hotdogs = args.fetch(:hotdogs, 0) * 2
+#   end
 
-  def score
-    puts chickenwings
-  end
-
+#   def score
+#     @score = chickenwings + hamburgers + hotdogs
+#   end
+# end
+x = "Goodbye" 
+def my_method
+  
+  yield("cruel")
 end
-
-p1 = Participant.new( 
-  name: "Zorro",
-  chickenwings: 5,
-  hotdogs: 8
-)
-
-p2 = Participant.new( 
-  name: "Annette",
-  chickenwings: 5,
-  hamburgers: 1,
-  hotdogs: 3
-)
-
-p3 = Participant.new( 
-  name: "Paul",
-  hamburgers: 5,
-  hotdogs: 8
-)
-@list = [p2, p1, p3]
-
-print p1
-
-
-
-
-
+  x = "Hello"
+  my_method {|y| "#{x = 1}, #{y} world" } # => "Hello, cruel world"
+  puts x
  
